@@ -1,0 +1,67 @@
+Purpose
+-------
+
+Demonstrate the execution order of RPM scriptlets and the dollar-one
+variable during RPM installation, upgrade, and removal.
+
+Example on Fedora 14
+--------------------
+
+.Invoke the demo
+----
+$ sudo ./demo.sh 
+----
+
+.Relevant output
+----
+Demo with yum
+ =============
+initial install
+>>>>>>>>>> 0.1-1.fc14 post 1
+upgrade
+>>>>>>>>>> 0.2-1.fc14 post 2
+final removal
+>>>>>>>>>> 0.2-1.fc14 preun 0
+
+Demo with rpm
+ =============
+initial install
+>>>>>>>>>> 0.1-1.fc14 pre 1
+>>>>>>>>>> 0.1-1.fc14 post 1
+upgrade
+>>>>>>>>>> 0.2-1.fc14 pre 2
+>>>>>>>>>> 0.2-1.fc14 post 2
+>>>>>>>>>> 0.1-1.fc14 preun 1
+>>>>>>>>>> 0.1-1.fc14 postun 1
+final removal
+----
+
+Example on RHEL 5
+-----------------
+
+.Invoke the demo
+----
+# ./demo.sh 
+----
+
+.Relevant output
+----
+# /tmp/demo.sh 
+Demo with yum
+ =============
+initial install
+>>>>>>>>>> 0.1-1.el5 pre 1
+>>>>>>>>>> 0.1-1.el5 post 1
+upgrade
+final removal
+>>>>>>>>>> 0.1-1.el5 preun 0
+>>>>>>>>>> 0.1-1.el5 postun 0
+
+Demo with rpm
+ =============
+initial install
+>>>>>>>>>> 0.1-1.el5 pre 1
+>>>>>>>>>> 0.1-1.el5 post 1
+upgrade
+final removal
+----

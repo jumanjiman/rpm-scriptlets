@@ -56,6 +56,9 @@ echo "%{marker} %{version}-%{release} postun $1" > /dev/stderr
 
 
 %changelog
+* Tue Feb 22 2011 Paul Morgan <jumanjiman@gmail.com> 0.2-1
+- bump version (jumanjiman@gmail.com)
+
 * Tue Feb 22 2011 Paul Morgan <jumanjiman@gmail.com> 0.1-1
 - new package built with tito
 

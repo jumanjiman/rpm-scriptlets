@@ -1,5 +1,5 @@
 Name:		rpm-scriptlets
-Version:	0.1
+Version:	0.2
 Release:	1%{?dist}
 Summary:	Demonstrate order of scriptlets during rpm install/upgrade
 

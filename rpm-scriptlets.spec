@@ -1,5 +1,5 @@
 Name:		rpm-scriptlets
-Version:	0.2
+Version:	0.3
 Release:	1%{?dist}
 Summary:	Demonstrate order of scriptlets during rpm install/upgrade
 
@@ -56,6 +56,10 @@ echo "%{marker} %{version}-%{release} postun $1" > /dev/stderr
 
 
 %changelog
+* Tue Feb 22 2011 Paul Morgan <jumanjiman@gmail.com> 0.3-1
+- README reflects output from updated demo.sh
+- improved demo logic and reporting
+
 * Tue Feb 22 2011 Paul Morgan <jumanjiman@gmail.com> 0.2-1
 - bump version (jumanjiman@gmail.com)
 

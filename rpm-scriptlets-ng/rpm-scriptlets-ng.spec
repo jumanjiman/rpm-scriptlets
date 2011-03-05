@@ -86,6 +86,9 @@ EOF
 
 
 %changelog
+* Sat Mar 05 2011 Paul Morgan <jumanjiman@gmail.com> 0.5-2
+- better obsoletes of rpm-scriptlets
+
 * Sat Mar 05 2011 Paul Morgan <jumanjiman@gmail.com> 0.5-1
 - obsolete origin rpm-scriptlets
 

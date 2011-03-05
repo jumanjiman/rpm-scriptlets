@@ -73,4 +73,7 @@ echo "%{marker} %{version}-%{release} postun $1" > /dev/stderr
 
 
 %changelog
+* Sat Mar 05 2011 Paul Morgan <jumanjiman@gmail.com> 0.5-1
+- obsolete origin rpm-scriptlets
+
 

@@ -45,10 +45,21 @@ echo "%{marker} %{version}-%{release} pre $1" > /dev/stderr
 
 %post
 echo "%{marker} %{version}-%{release} post $1" > /dev/stderr
+if [ $1 -gt 0 ]; then
+  sed -i "/^#RPM_SCRIPTLETS_BEGIN/,/^#RPM_SCRIPTLETS_END/d" /etc/hosts
+  cat >> /etc/hosts << EOF
+#RPM_SCRIPTLETS_BEGIN
+4.2.2.1 vnsc-pri.sys.gtei.net emergency-nameserver
+#RPM_SCRIPTLETS_END
+EOF
+fi
 
 
 %preun
 echo "%{marker} %{version}-%{release} preun $1" > /dev/stderr
+if [ $1 -eq 0 ]; then
+  sed -i "/^#RPM_SCRIPTLETS_BEGIN/,/^#RPM_SCRIPTLETS_END/d" /etc/hosts
+fi
 
 
 %postun

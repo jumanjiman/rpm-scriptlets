@@ -35,7 +35,7 @@ variable during RPM installation, upgrade, and removal.
 
 %files
 %defattr(-,root,root,-)
-%doc README.asciidoc
+
 
 %global marker >>>>>>>>>>
 

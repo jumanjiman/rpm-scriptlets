@@ -85,6 +85,21 @@ EOF
 :
 
 
+%triggerin -- rpm-scriptlets-other
+# this should run when rpm-scriptlets-other is installed
+echo "%{marker} %{name}-%{version}-%{release} triggerin $1 rpm-scriptlets-other has been installed" > /dev/stderr
+
+
+%triggerun -- rpm-scriptlets-other
+# this should run when rpm-scriptlets-other is removed
+echo "%{marker} %{name}-%{version}-%{release} triggerun $1 rpm-scriptlets-other has been uninstalled" > /dev/stderr
+
+
+%triggerpostun -- rpm-scriptlets-other
+# this should run when rpm-scriptlets-other is removed
+echo "%{marker} %{name}-%{version}-%{release} triggerpostun $1 rpm-scriptlets-other has been uninstalled" > /dev/stderr
+
+
 %changelog
 * Sat Mar 05 2011 Paul Morgan <jumanjiman@gmail.com> 0.5-2
 - better obsoletes of rpm-scriptlets

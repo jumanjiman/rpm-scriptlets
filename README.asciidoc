@@ -17,20 +17,32 @@ $ sudo ./demo.sh
 Demo with yum and plugins
 =========================
 initial install
->>>>>>>>>> 0.1-1.fc14 post 1
+>>>>>>>>>> 0.5-3.fc14 post 1
 upgrade
->>>>>>>>>> 0.2-1.fc14 post 2
+upgrade to /tmp/tito/noarch/rpm-scriptlets-ng-0.5-3.fc14.noarch.rpm
+install rpm-scriptlets-other
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerin 1 rpm-scriptlets-other has been installed
+upgrade rpm-scriptlets-other
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerin 1 rpm-scriptlets-other has been installed
+remove rpm-scriptlets-other
+>>>>>>>>>> rpm-scriptlets-other-0.2-1.fc14 preun 0
 final removal
->>>>>>>>>> 0.2-1.fc14 preun 0
+>>>>>>>>>> 0.5-3.fc14 preun 0
 
 Demo with yum and NO plugins
 ============================
 initial install
->>>>>>>>>> 0.1-1.fc14 post 1
+>>>>>>>>>> 0.5-3.fc14 post 1
 upgrade
->>>>>>>>>> 0.2-1.fc14 post 2
+upgrade to /tmp/tito/noarch/rpm-scriptlets-ng-0.5-3.fc14.noarch.rpm
+install rpm-scriptlets-other
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerin 1 rpm-scriptlets-other has been installed
+upgrade rpm-scriptlets-other
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerin 1 rpm-scriptlets-other has been installed
+remove rpm-scriptlets-other
+>>>>>>>>>> rpm-scriptlets-other-0.2-1.fc14 preun 0
 final removal
->>>>>>>>>> 0.2-1.fc14 preun 0
+>>>>>>>>>> 0.5-3.fc14 preun 0
 
 Demo with rpm
 =============
@@ -42,9 +54,32 @@ upgrade
 >>>>>>>>>> 0.2-1.fc14 post 2
 >>>>>>>>>> 0.1-1.fc14 preun 1
 >>>>>>>>>> 0.1-1.fc14 postun 1
-final removal
+upgrade to /tmp/tito/noarch/rpm-scriptlets-ng-0.5-3.fc14.noarch.rpm
+>>>>>>>>>> 0.5-3.fc14 pre 1
+>>>>>>>>>> 0.5-3.fc14 post 1
 >>>>>>>>>> 0.2-1.fc14 preun 0
 >>>>>>>>>> 0.2-1.fc14 postun 0
+>>>>>>>>>> 0.5-3.fc14 triggerpostun 1
+install rpm-scriptlets-other
+>>>>>>>>>> rpm-scriptlets-other-0.1-1.fc14 pre 1
+>>>>>>>>>> rpm-scriptlets-other-0.1-1.fc14 post 1
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerin 1 rpm-scriptlets-other has been installed
+upgrade rpm-scriptlets-other
+>>>>>>>>>> rpm-scriptlets-other-0.2-1.fc14 pre 2
+>>>>>>>>>> rpm-scriptlets-other-0.2-1.fc14 post 2
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerin 1 rpm-scriptlets-other has been installed
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerun 1 rpm-scriptlets-other has been uninstalled
+>>>>>>>>>> rpm-scriptlets-other-0.1-1.fc14 preun 1
+>>>>>>>>>> rpm-scriptlets-other-0.1-1.fc14 postun 1
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerpostun 1 rpm-scriptlets-other has been uninstalled
+remove rpm-scriptlets-other
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerun 1 rpm-scriptlets-other has been uninstalled
+>>>>>>>>>> rpm-scriptlets-other-0.2-1.fc14 preun 0
+>>>>>>>>>> rpm-scriptlets-other-0.2-1.fc14 postun 0
+>>>>>>>>>> rpm-scriptlets-ng-0.5-3.fc14 triggerpostun 1 rpm-scriptlets-other has been uninstalled
+final removal
+error:
+error: package rpm-scriptlets is not installed
 ----
 
 Example on RHEL 5

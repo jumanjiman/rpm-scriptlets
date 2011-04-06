@@ -101,6 +101,9 @@ echo "%{marker} %{name}-%{version}-%{release} triggerpostun $1 rpm-scriptlets-ot
 
 
 %changelog
+* Wed Apr 06 2011 Paul Morgan <jumanjiman@gmail.com> 0.5-3
+- add trigger scripts for rpm-scriptlets-other
+
 * Sat Mar 05 2011 Paul Morgan <jumanjiman@gmail.com> 0.5-2
 - better obsoletes of rpm-scriptlets
 

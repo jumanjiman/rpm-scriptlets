@@ -1,6 +1,6 @@
 Name:		rpm-scriptlets-ng
 Version:	0.5
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Demonstrate order of scriptlets during rpm install/upgrade
 
 Group:		Development/Tools
